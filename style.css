@@ -1,0 +1,2134 @@
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo', sans-serif;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.container {
+    width: 100%;
+}
+
+header {
+    padding: 0 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 91px;
+    width: 100%;
+    background-color: white;
+}
+
+header .links {
+    display: flex;
+    align-items: center;
+}
+
+header .links li {
+    list-style: none;
+}
+
+header .links a {
+    padding: 16px;
+    gap: 10px;
+    color: #000;
+    font-family: 'Heebo';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: none;
+    line-height: 100%;
+}
+
+header>button {
+    padding: 0 24px;
+    gap: 10px;
+    border-radius: 24px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: #0B0808;
+    border: none;
+    cursor: pointer;
+    transition: .2s linear;
+    border: 1px solid black;
+}
+
+header>button:hover {
+    transition: .2s linear;
+    border: 1px solid black;
+    background: transparent;
+}
+
+header>button a {
+    font-family: Heebo;
+    transition: .2s linear;
+    display: inline-flex;
+    font-size: 16px;
+    font-style: normal;
+    color: #FFF;
+    font-weight: 500;
+    line-height: 100%;
+    text-decoration: none;
+}
+
+header>button:hover a {
+    color: black;
+}
+
+header .menu {
+    display: none;
+}
+
+/*  */
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 120px;
+    margin-top: 88px;
+}
+
+.hero .left h2 {
+    color: #000;
+    font-family: "Hepta Slab";
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    width: 513px;
+}
+
+.hero .left h2 .image-heading {
+    display: inline;
+    background-image: url(images/heading-text-image.png);
+    background-clip: text;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Hepta Slab';
+}
+
+.hero .left p {
+    color: rgba(0, 0, 0, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    width: 513px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+}
+
+.hero .left .buttons button {
+    display: inline-flex;
+    padding: 0 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #000;
+    color: #FFF;
+    border: 1px solid #0B0808;
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    border-radius: 24px;
+    background: #0B0808;
+    transition: .2s linear;
+    height: 43px;
+    cursor: pointer;
+    /* 16px */
+}
+
+.hero .left .buttons button:hover {
+    color: black;
+    border: 1px solid #0B0808;
+    background: transparent;
+    /* 16px */
+}
+
+.hero .left .buttons button:last-child {
+    color: black;
+    border: 1px solid black;
+    background: transparent;
+    margin-left: 16px;
+}
+
+.hero .left .buttons button:last-child:hover {
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+    margin-left: 16px;
+}
+
+.hero .right img {
+    width: 100%;
+    height: 100%;
+}
+
+.hero .right {
+    position: relative;
+}
+
+.hero .right svg {
+    position: absolute;
+}
+
+.hero .right svg.star1 {
+    position: absolute;
+    left: -45px;
+    animation: rotate 16s linear infinite, leftright1 10s linear alternate infinite;
+}
+
+.hero .right svg.star2 {
+    position: absolute;
+    left: -70px;
+    top: 330px;
+    height: 60px;
+    animation: rotate 25s linear infinite, leftright2 7s linear alternate infinite;
+}
+
+.hero .right svg.star3 {
+    position: absolute;
+    right: -40px;
+    top: 270px;
+    height: 40px;
+    animation: rotate 20s linear infinite,
+        leftright3 9s linear alternate infinite;
+}
+
+@keyframes leftright1 {
+    0% {
+        left: -45px;
+        top: 0;
+    }
+
+    100% {
+        top: -50px;
+        left: -255px;
+    }
+}
+
+@keyframes leftright2 {
+    0% {
+        left: -70px;
+        top: 330px;
+    }
+
+    100% {
+        left: -150px;
+        top: 365px;
+    }
+}
+
+@keyframes leftright3 {
+    0% {
+        right: -40px;
+        top: 270px;
+    }
+
+    100% {
+        right: -90px;
+        top: 240px;
+    }
+}
+
+/*  */
+
+.features {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(78deg, #0B0808 5.52%, rgba(11, 8, 8, 0.91) 73.86%, rgba(11, 8, 8, 0.89) 85.58%, rgba(11, 8, 8, 0.83) 96.59%);
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 88px 120px;
+    margin-top: 100px;
+}
+
+.features .top h2 {
+    color: #FFF;
+    font-family: "Hepta Slab";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.features .top p {
+    color: rgba(255, 255, 255, 0.70);
+    text-align: center;
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-top: 24px;
+    width: 630px;
+}
+
+.features .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.features .bottom .card {
+    width: 380px;
+    text-align: left;
+}
+
+.features .bottom .left .card:nth-child(1) {
+    margin-bottom: 120px;
+}
+
+.features .bottom .right .card:nth-child(1) {
+    margin-bottom: 120px;
+}
+
+.features .bottom .card h4 {
+    color: #FFF;
+    font-family: "Hepta Slab";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    margin-bottom: 24px;
+}
+
+.features .bottom .card p {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    width: 100%;
+}
+
+.features .bottom .left {
+    height: auto;
+}
+
+.features .bottom .right {
+    height: auto;
+}
+
+/*  */
+
+.discover {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 88px;
+    padding: 0 120px;
+    padding-right: 0px;
+    flex-direction: column;
+}
+
+.discover>.justify {
+    padding-right: 120px;
+}
+
+.discover .justify {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.discover .justify h2 {
+    color: #000;
+    font-family: "Hepta Slab";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    width: 428px;
+}
+
+.discover .justify svg {
+    cursor: pointer;
+}
+
+.discover .justify svg:nth-child(1) {
+    margin-right: 12px;
+}
+
+.discover .card-slider {
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.discover .card-slider .card {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    max-width: 380px;
+    min-width: 380px;
+    max-height: 543px;
+    border-radius: 12px;
+    border: 2px solid #000;
+    padding: 32px 24px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.discover .card-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.discover .card-slider .card h3 {
+    color: #FFF;
+    font-family: "Hepta Slab";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 16px;
+}
+
+.discover .card-slider .card p {
+    color: rgba(255, 255, 255, 0.70);
+    text-align: center;
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+    margin-bottom: 32px;
+}
+
+.discover .card-slider .card .justify {
+    margin-top: 24px;
+    width: 100%;
+}
+
+.discover .card-slider .card button {
+    color: #FFF;
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    border: 1px solid #FFF;
+    background-color: #000;
+    cursor: pointer;
+    height: 43px;
+    transition: .4s linear;
+}
+
+.discover .card-slider .card button:hover {
+    color: #000;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
+.discover .card-slider .card .justify img {
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.discover .card-slider .card .justify img:hover {
+    margin-bottom: 8px;
+}
+
+/*  */
+
+.blog {
+    background: rgba(11, 8, 8, 0.04);
+    margin-top: 88px;
+    padding: 88px 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.blog h2 {
+    color: #000;
+    font-family: "Hepta Slab";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 60px;
+}
+
+.blog .card {
+    width: 380px;
+    background: linear-gradient(58deg, #0B0808 2.34%, rgba(11, 8, 8, 0.87) 73.46%);
+    border-radius: 12px;
+}
+
+.blog .card .details {
+    padding: 24px;
+    padding-bottom: 35px;
+    color: white;
+}
+
+.blog .card h4 {
+    color: #FFF;
+    font-family: "Hepta Slab";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.blog .card .justify {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog .card .justify span {
+    color: #FFF;
+    font-family: Heebo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.blog .card p {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.blog .card .line {
+    margin-bottom: 24px;
+    background: rgba(255, 255, 255, 0.70);
+    height: 1px;
+}
+
+.blog .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.blog .center svg:nth-child(1) {
+    margin-right: 16px;
+}
+
+.blog .cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.blog .cards .card:nth-child(2) {
+    margin: 0 15px;
+}
+
+.blog .cards .card span {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.blog .cards .card span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 0%;
+    transition: .2s linear;
+    background: white;
+}
+
+.blog .cards .card span:hover::after {
+    width: 100%;
+}
+
+.blog .center svg {
+    cursor: pointer;
+}
+
+/*  */
+
+.customer-reviews {
+    background: rgba(11, 8, 8, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 88px 120px;
+    position: relative;
+}
+
+.customer-reviews .top-star {
+    position: absolute;
+    top: 100px;
+    left: 353px;
+    animation: rotate 16s linear infinite,
+        leftright4 12s alternate linear infinite;
+}
+
+.customer-reviews .bottom-star {
+    position: absolute;
+    top: 418px;
+    right: 54px;
+    animation: rotate 12s linear infinite, leftright5 9s alternate linear infinite;
+}
+
+@keyframes leftright4 {
+    0% {
+        top: 100px;
+        left: 353px;
+    }
+
+    100% {
+        top: 20px;
+        left: 253px;
+    }
+}
+
+@keyframes leftright5 {
+    0% {
+        top: 418px;
+        right: 54px;
+    }
+
+    100% {
+        top: 468px;
+        right: 253px;
+    }
+}
+
+.customer-reviews h2 {
+    color: #000;
+    font-family: "Hepta Slab";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.customer-reviews .customers {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.customer-reviews .customers .group {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.customer-reviews .customers .card {
+    width: 585px;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #0B0808 0%, rgba(11, 8, 8, 0.95) 86.46%, rgba(11, 8, 8, 0.97) 100%);
+    color: white;
+    padding: 32px 24px;
+}
+
+.customer-reviews .customers .card:nth-child(1) {
+    margin-right: 30px;
+}
+
+.customer-reviews .customers .card>p {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    margin: 24px 0;
+}
+
+.customer-reviews .customers .card>.details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-reviews .customers .card .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-reviews .customers .card .left>.details {
+    margin-left: 8px;
+}
+
+.customer-reviews .card .left>.details span {
+    color: #FFF;
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.customer-reviews .card>.details p {
+    color: #FFF;
+    font-family: Heebo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.customer-reviews .card .line {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.70);
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.customer-reviews .card .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-reviews .card .right img {
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.customer-reviews .card .right img:hover {
+    margin-bottom: 12px;
+}
+
+.mt-24 {
+    margin-top: 24px;
+}
+
+/*  */
+
+.arts {
+    background: linear-gradient(90deg, #0D0A0A 2.81%, rgba(13, 10, 10, 0.92) 98.09%);
+    padding: 88px 120px;
+}
+
+.arts .justify {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+}
+
+.arts .justify h2 {
+    color: #FFF;
+    font-family: "Hepta Slab";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    width: 317px;
+}
+
+.arts .justify button {
+    display: inline-flex;
+    padding: 0 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    border: 1px solid #FFF;
+    background: transparent;
+    height: 43px;
+    color: #FFF;
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    cursor: pointer;
+    transition: .4s linear;
+}
+
+.arts .justify button:hover {
+    background: white;
+    color: black;
+    border: 1px solid white;
+}
+
+.arts .images-2-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.arts .images-3-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.arts .images-2-col {
+    position: relative;
+}
+
+.arts .details {
+    width: 386px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 24px;
+    bottom: 32px;
+    color: #fff;
+}
+
+.arts .details h3 {
+    font-family: "Hepta Slab";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 16px;
+}
+
+.arts .details p {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+/*  */
+
+.future {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 88px 120px;
+    background: rgba(11, 8, 8, 0.04);
+}
+
+.future h2 {
+    color: #000;
+    font-family: "Hepta Slab";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.future .line {
+    height: 1px;
+    background: rgba(0, 0, 0, 0.70);
+    width: 100%;
+    margin-top: 32px;
+    margin-bottom: 39px;
+}
+
+.flex-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.future .flex-group .left .future-card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.future .flex-group .left .future-card .left img {
+    margin-right: 16px;
+}
+
+.future .flex-group .left .future-card .right h3 {
+    color: #000;
+    font-family: "Hepta Slab";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.future .flex-group .left .future-card .right p {
+    color: rgba(0, 0, 0, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    width: 465px;
+    margin-top: 24px;
+}
+
+/*  */
+
+.about {
+    padding: 88px 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .card {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(89deg, #0D0A0A 0.42%, rgba(13, 10, 10, 0.85) 99.54%);
+    border-radius: 24px;
+    padding: 60px 48px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about .card .left h2 {
+    color: #FFF;
+    font-family: "Hepta Slab";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    margin-bottom: 48px;
+}
+
+.about .card .left h3 {
+    color: #FFF;
+    font-family: "Hepta Slab";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    margin-bottom: 32px;
+    width: 380px;
+}
+
+.about .card .left p {
+    width: 585px;
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    margin-bottom: 24px;
+}
+
+.about .card .left p:nth-child(0) {
+    margin-bottom: 0;
+}
+
+.about .card .right .group {
+    display: flex;
+}
+
+.about .card .right .group .details {
+    margin: 12.5px;
+    position: relative;
+}
+
+.about .card .right .group .details .blured {
+    border-radius: 0px 0px 8px 8px;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(4px);
+    padding: 8px 16px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about .card .right .group .details .blured p {
+    color: #FFF;
+    font-family: Heebo;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.about .card .right .group .details .blured span {
+    color: #FFF;
+    font-family: Heebo;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+/*  */
+
+.footer {
+    background: linear-gradient(180deg, #0D0A0A 0%, rgba(13, 10, 10, 0.89) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 58px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.footer .top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer .top svg {
+    margin-bottom: 16px;
+}
+
+.footer .top>ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.footer .top ul {
+    list-style: none;
+    color: white;
+    margin: 0 45px;
+}
+
+.footer .top ul .heading {
+    color: #FFF;
+    font-family: "Hepta Slab";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 24px;
+}
+
+.footer .top ul li:not(.heading) {
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+    cursor: pointer;
+}
+
+.footer .top .footer-details {
+    width: 278px;
+}
+
+.footer .top .footer-details {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.footer .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.footer .bottom p {
+    color: rgba(255, 255, 255, 0.70);
+    font-family: Heebo;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%;
+}
+
+.footer .bottom div img {
+    margin: 0 12px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.footer .bottom div img:hover {
+    scale: 1.1;
+}
+
+/* -> Responsive */
+
+@media (max-width: 1366px) {
+    .arts .images-2-col img {
+        height: 360px;
+    }
+
+    .arts .images-2-col .dark-image img {
+        width: 745px;
+        height: 100%;
+
+    }
+
+    .arts .images-3-col img {
+        width: 360px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 1280px) {
+
+    header {
+        padding: 0 80px;
+    }
+
+    .hero {
+        padding: 0 80px;
+    }
+
+    .hero .right img {
+        width: 480px;
+        height: 480px;
+    }
+
+    .hero .left img {
+        height: 40px;
+    }
+
+    .hero .left h2 {
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        width: 403px;
+    }
+
+    .hero .left p {
+        color: rgba(0, 0, 0, 0.70);
+        font-family: Heebo;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        width: 363px;
+    }
+
+    /*  */
+
+    .arts .images-2-col img:first-child {
+        width: 700px;
+        height: 330px;
+    }
+
+    .arts .images-2-col img:last-child {
+        width: 330px;
+        height: 330px;
+    }
+
+    .arts .images-3-col img {
+        width: 330px;
+        height: 330px;
+    }
+}
+
+@media (max-width: 1080px) {
+
+    .customer-reviews h2 {
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .features .top h2 {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .features .top p {
+        width: 482px;
+        color: rgba(255, 255, 255, 0.70);
+        text-align: center;
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+    }
+
+    .features {
+        padding: 54px 80px;
+    }
+
+    .features .bottom .card {
+        width: auto;
+    }
+
+    .features .bottom .card:nth-child(1) {
+        margin-bottom: 62px !important;
+    }
+
+    .features .bottom .card h4 {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        width: 228px;
+    }
+
+    .features .bottom .card p {
+        width: 228px;
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Heebo;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+    }
+
+    .features img {
+        height: 324px;
+    }
+
+    .discover {
+        padding: 0 80px;
+        padding-right: 0;
+    }
+
+    .blog {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .customer-reviews {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .future {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .about {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .about .detailed-card {
+        display: flex;
+    }
+
+    .about .detailed-card .group .details img {
+        width: 127px;
+        height: 129px;
+    }
+
+    .about .detailed-card .group .details:first-child {
+        margin-left: 0;
+    }
+
+    .about .detailed-card .group .details:last-child {
+        margin-left: 0;
+    }
+
+    .arts {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+
+    .arts .images-2-col {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .arts .images-2-col .dark-image {
+        position: relative;
+    }
+
+    .arts .images-2-col img:first-child {
+        width: 600px;
+    }
+
+    .arts .images-2-col img:last-child {
+        width: 290px;
+        height: 290px;
+    }
+
+    .arts .images-3-col img {
+        width: 290px;
+    }
+
+    .future h2 {
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .future .flex-group .left .future-card .right h3 {
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .future .flex-group .left .future-card .right p {
+        color: rgba(0, 0, 0, 0.70);
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        width: 296px;
+        margin-top: 16px;
+    }
+
+    .future .flex-group .right img {
+        width: 228px;
+        height: 280px;
+        flex-shrink: 0;
+    }
+
+    .about .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about .card .right .group {
+        display: inline-flex;
+    }
+
+    .about .card .left h2 {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        margin-bottom: 24px;
+    }
+
+    .about .card .left h3 {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        width: 292px;
+        margin-bottom: 16px;
+    }
+
+    .about .card .left p {
+        margin-bottom: 0px;
+    }
+
+    .about .card .right {
+        margin-top: 8px;
+    }
+
+    .footer {
+        padding: 24px 80px;
+    }
+
+    .footer .top>ul {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 428px;
+        margin: 0 !important;
+        justify-content: center;
+    }
+
+    .footer .top>ul ul {
+        width: 95px;
+    }
+
+    .footer .top>ul ul:last-child {
+        margin: 0 50px;
+    }
+
+    .footer .top>ul .heading {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-bottom: 12px;
+    }
+
+    .footer .top>ul li:not(.heading) {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        margin-bottom: 4px;
+    }
+
+    .footer .top>ul ul:nth-child(1) {
+        margin-bottom: 32px;
+    }
+
+    .footer .top>ul ul:nth-child(2) {
+        margin-bottom: 32px;
+    }
+
+    .footer .top>ul ul:nth-child(3) {
+        margin-left: 55px;
+    }
+
+    .footer .bottom {
+        display: inline;
+        margin-top: 0;
+        position: absolute;
+        bottom: 24px;
+        left: 80px;
+        width: fit-content;
+    }
+
+    .footer .bottom p {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+    }
+
+    .footer .bottom img:first-child {
+        margin-left: 0;
+    }
+
+    .footer .bottom img:last-child {
+        margin-right: 0;
+    }
+
+    .footer .bottom div {
+        margin-top: 16px;
+    }
+
+    .footer .top .footer-details svg {
+        height: 24px;
+        width: 69px;
+        margin-bottom: 8px;
+    }
+
+    .footer .top .footer-details p {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        width: 228px;
+    }
+
+    .footer .bottom div img {
+        margin: 0 8px;
+    }
+}
+
+@media (max-width: 900px) {
+
+
+    header .links li a {
+        font-size: 15px;
+    }
+
+    .hero {
+        margin-top: 40px;
+    }
+
+    .hero .left h2 {
+        width: 320px;
+        font-size: 45px;
+    }
+
+    .hero .right img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .hero .left p {
+        font-size: 14px;
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+
+    .features .center img {
+        height: 170px;
+    }
+
+    .discover .justify h2 {
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        width: 228px;
+    }
+
+    .discover .card-slider .card {
+        max-width: 312px;
+        min-width: 312px;
+    }
+
+    .discover .card-slider .card>img {
+        width: 272px;
+        height: 245px;
+    }
+
+    .discover .card-slider .card h3 {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .discover .card-slider .card p {
+        color: rgba(255, 255, 255, 0.70);
+        text-align: center;
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        width: 228px;
+    }
+
+    .discover .card-slider .card button {
+        color: #FFF;
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .blog {
+        padding-right: 0;
+    }
+
+    .blog .cards {
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+    }
+
+    .blog .cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .blog h2 {
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        width: 228px;
+    }
+
+    .blog .center {
+        padding-right: 60px;
+    }
+
+    .blog .cards .card {
+        max-width: 312px;
+        min-width: 312px;
+        scroll-snap-align: start;
+    }
+
+    .blog .cards .card>img {
+        width: 100%;
+    }
+
+    .blog .cards .card .details h4 {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .blog .cards .card .details .justify span {
+        color: #FFF;
+        font-family: Heebo;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 120%;
+    }
+
+    .blog .cards .card .details p {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 120%;
+    }
+
+    .blog .cards .card .line {
+        margin-top: 16px;
+        margin-bottom: 12px;
+    }
+
+    .blog .cards .card span {
+        color: #FFF;
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .container>div {
+        padding: 48px 60px;
+        margin-top: 0;
+    }
+
+    .container header {
+        padding: 0 60px;
+    }
+
+    .discover,
+    .blog {
+        padding-right: 0 !important;
+    }
+
+    .about .card .left p {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        width: 484px;
+    }
+
+    .arts .images-3-col {
+        position: relative;
+    }
+
+    .arts .images-3-col img:first-child {
+        position: absolute;
+        bottom: 334px;
+        right: 0;
+    }
+
+    .arts .images-2-col img:first-child {
+        width: 100% !important;
+    }
+
+
+    .footer .top>ul ul:nth-child(3) {
+        margin-left: 50px;
+    }
+
+    .footer .top>ul {
+        width: 480px;
+    }
+
+    .footer .bottom {
+        left: 60px;
+    }
+}
+
+@media (max-width: 428px) {
+
+    .container>div {
+        padding: 40px 20px !important;
+    }
+
+    .container>div h2 {
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .container header {
+        padding: 0 20px;
+        height: 56px;
+    }
+
+    header .links {
+        display: none;
+    }
+
+    header button {
+        display: none;
+    }
+
+    header .menu {
+        display: block;
+    }
+
+    .hero {
+        margin: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .hero .left {
+        margin-top: 30px;
+    }
+
+    .hero .left h2 {
+        width: 215px;
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .hero .left h2 img {
+        height: 24px;
+    }
+
+    .hero .left p {
+        color: rgba(0, 0, 0, 0.70);
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        width: 280px;
+        margin-top: 24px;
+        margin-bottom: 32px;
+    }
+
+    .features {
+        position: relative;
+    }
+
+    .features .top p {
+        color: rgba(255, 255, 255, 0.70);
+        text-align: center;
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 140%;
+        width: 248px;
+    }
+
+    .features .bottom {
+        flex-direction: column;
+    }
+
+    .features .center {
+        position: absolute;
+        top: 190px;
+    }
+
+    .features .bottom .left {
+        height: auto;
+        width: 100%;
+    }
+
+    .features .bottom {
+        flex-direction: column;
+        margin-top: 210px;
+    }
+
+    .features .bottom .right {
+        height: auto;
+        width: 100%;
+    }
+
+    .features .bottom .card p {
+        width: auto;
+    }
+
+    .features .bottom .card h4 {
+        width: 100%;
+    }
+
+    .features .bottom .card {
+        margin-bottom: 32px !important;
+    }
+
+    .features .bottom .card:nth-child(1) {
+        margin-bottom: 32px !important;
+    }
+
+    .features .bottom .right .card:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    .discover .justify h2 {
+        width: 170px;
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+    }
+
+    .discover .justify {
+        padding-right: 20px;
+    }
+
+    .blog h2 {
+        margin-right: 20px;
+        width: auto;
+        margin-bottom: 32px;
+        margin-top: 20px;
+    }
+
+    .blog .center {
+        padding: 0;
+    }
+
+    .discover .card-slider {
+        margin-top: 32px;
+    }
+
+    .customer-reviews {
+        padding-top: 40px;
+    }
+
+    .customer-reviews .customers {
+        margin-top: 32px;
+    }
+
+    .customer-reviews .customers .group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .customer-reviews .customers .group .card {
+        width: fit-content;
+    }
+
+    .customer-reviews .customers .group .card:nth-child(1) {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+
+    .mt-24 {
+        margin-top: 16px;
+    }
+
+    .arts .justify {
+        margin-bottom: 24px;
+    }
+
+    .arts .justify h2 {
+        color: #FFF;
+        text-align: center;
+        font-family: "Hepta Slab";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .arts .justify button {
+        display: none;
+    }
+
+    .arts .images-2-col img:first-child {
+        width: 100% !important;
+        height: 311px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .arts .images-2-col img:last-child {
+        width: 100%;
+        object-fit: cover;
+        height: 312px;
+        border-radius: 10px;
+        margin-bottom: 8px;
+    }
+
+    .arts .images-3-col {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .arts .images-3-col img {
+        width: 100%;
+        height: 311px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 8px 0;
+    }
+
+    .arts .images-2-col .dark-image .details h3 {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        margin-bottom: 12px;
+    }
+
+    .arts .images-2-col .dark-image .details p {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        width: 248px;
+    }
+
+    .arts .images-3-col * {
+        position: unset !important;
+    }
+
+    .future .flex-group {
+        flex-direction: column;
+    }
+
+    .future h2 {
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        width: 280px;
+    }
+
+    .future .flex-group .left .future-card .right p {
+        color: #000;
+        font-family: "Hepta Slab";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        width: 253px;
+    }
+
+    .future .flex-group .left .future-card .right p {
+        color: rgba(0, 0, 0, 0.70);
+        font-family: Heebo;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        width: 253px;
+        line-height: 140%;
+    }
+
+    .future .flex-group .left .future-card .left img {
+        margin-right: 8px;
+        display: flex;
+        width: 16px;
+        height: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .future .flex-group .right img {
+        width: 100%;
+        height: 343.86px;
+        object-fit: cover;
+    }
+
+    .about .card {
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 32px;
+        padding-bottom: 40px;
+    }
+
+    .about .card .left h2 {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        margin-bottom: 16px;
+    }
+
+    .about .card .left h3 {
+        color: #FFF;
+        font-family: "Hepta Slab";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        width: 248px;
+        margin-bottom: 12px;
+    }
+
+    .about .card .left p {
+        color: rgba(255, 255, 255, 0.70);
+        font-family: Heebo;
+        width: 248px;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    .about .card .left p.para2 {
+        margin-bottom: 14px;
+    }
+
+    .about .card .right {
+        margin: 0 auto;
+    }
+
+    .about .card .right .detailed-card .group {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .about .card .right .detailed-card .group .details .blured * {
+        display: inline;
+    }
+
+    .about .card .right .detailed-card .group .details .blured {
+        text-align: center;
+    }
+
+    .about .card .right .detailed-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about .card .right .detailed-card .group img {
+        width: 175px;
+        height: 178px;
+    }
+
+    .footer {
+        padding: 40px 20px !important;
+        align-items: flex-start;
+        padding-bottom: 24px !important;
+    }
+
+    .footer .top {
+        flex-direction: column;
+    }
+
+    .footer .bottom {
+        position: unset;
+        margin-top: 48px;
+    }
+
+    .footer .top ul {
+        margin: 0 !important;
+    }
+
+    .footer .top>ul {
+        width: 99%;
+        margin-top: 48px !important;
+    }
+
+    .footer .top>ul ul:last-child {
+        margin-left: 86px !important;
+        margin-top: 24px !important;
+    }
+
+    .footer .top>ul ul:nth-child(3) {
+        margin-top: 24px !important;
+    }
+
+    .footer .top>ul ul:nth-child(2) {
+        margin-left: 86px !important;
+    }
+}
+
+/*  */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
