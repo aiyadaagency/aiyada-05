@@ -93,14 +93,21 @@ gsap.from(".arts *", {
   },
 });
 
-gsap.from(".future *", {
+gsap.from(".footer .top *", {
   opacity: 0,
-  left: -450,
-
-  stagger: 0.05,
+  stagger: 0.02,
   duration: 1,
   scrollTrigger: {
-    trigger: ".future .flex-group .left .future-card",
+    trigger: ".footer .top",
+  },
+});
+
+gsap.from(".footer .bottom ", {
+  opacity: 0,
+  stagger: 0.02,
+  duration: 1,
+  scrollTrigger: {
+    trigger: ".footer .top",
   },
 });
 
