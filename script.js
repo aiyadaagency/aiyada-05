@@ -128,15 +128,6 @@ gsap.from(".about .card *", {
   },
 });
 
-gsap.from(".footer *", {
-  opacity: 0,
-  stagger: 0.02,
-  duration: 1,
-  scrollTrigger: {
-    trigger: ".footer .top",
-  },
-});
-
 // ? Scroll Effect
 
 // const scroll = new LocomotiveScroll({
