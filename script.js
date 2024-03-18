@@ -126,7 +126,7 @@ gsap.from(".footer *", {
   stagger: 0.02,
   duration: 1,
   scrollTrigger: {
-    trigger: ".footer ",
+    trigger: ".footer .top",
   },
 });
 
